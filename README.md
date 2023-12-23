@@ -13,14 +13,14 @@ To compute PCA, the following steps are taken:
 1. **Mean Calculation:**
    The row-wise mean $\bar{x}$ (i.e., the mean of all rows) is calculated and subtracted from $X$. The mean $\bar{x}_j$ is given by:
 
-   ![Mean Calculation](https://latex.codecogs.com/svg.latex?\bar{x}_j%20=%20\frac{1}{n}\sum_{i=1}^{n}X_{ij})
+   ![Mean Calculation](https://latex.codecogs.com/svg.latex?\bar{x}_j%20=%20\frac{1}{n}%20\sum_{i=1}^{n}%20X_{ij})
 
    where $n$ is the number of observations (rows) and $X_{ij}$ represents the value at the $i$ th row and $j$ th column.
 
 2. **Mean Matrix:**
    The mean matrix $\bar{X}$ is constructed with each row being $\bar{x}$:
 
-   ![Mean Matrix](https://latex.codecogs.com/svg.latex?\bar{X}%20=%20\begin{bmatrix}%20\bar{x}%20&%20\ldots%20&%20\bar{x}%20\end{bmatrix})
+   ![Mean Matrix](https://latex.codecogs.com/svg.latex?\bar{X}%20=%20\begin{bmatrix}%20\bar{x}%20\%20\vdots%20\%20\bar{x}%20\end{bmatrix})
 
 3. **Subtracting the Mean:**
    Subtracting $\bar{X}$ from $X$ results in the mean-subtracted data $B$:
