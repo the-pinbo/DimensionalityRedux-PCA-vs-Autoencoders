@@ -8,20 +8,6 @@ Principal Component Analysis (PCA) provides a hierarchical coordinate system to 
 
 PCA then proceeds to find the eigenvalues and eigenvectors of the covariance matrix $C$. The eigenvectors (principal components) give the directions of maximum variance, and the eigenvalues give the magnitude of the variance in those directions. The data can then be projected onto these principal components to reduce its dimensionality while preserving as much variance as possible.
 
-### First Principal Component
-
-The first principal component $u_1$ is given as:
-
-$$u_1 = \underset{\|u_1\|=1}{\text{argmax}} \; u_1^\top B^\top B u_1,$$
-
-which is the eigenvector of $B^\top B$ corresponding to the largest eigenvalue. Now it is clear that $u_1$ is the left singular vector of $B$ corresponding to the largest singular value.
-
-It is possible to obtain the principal components by computing the eigen-decomposition of $C$:
-
-$$CV = VD,$$
-
-which is guaranteed to exist, since $C$ is Hermitian.
-
 ## Understanding Eigendigits Through PCA
 
 ### Image Preprocessing for PCA
