@@ -22,6 +22,8 @@ $$X = U\Sigma V^ \ast \approx \widetilde{U}\widetilde{\Sigma}\widetilde{V}^ \ast
 
 Here, $U$ contains our eigenvectors—or "eigendigits"—which can be reshaped back into the original image dimensions of 28×28 pixels. The tilde notation $\widetilde{}$ indicates that we are working with a subset of the matrix, representing a reduced number of singular values and vectors for a more efficient representation.
 
+If you're interested in exploring more about the implementation details or would like to view the Jupyter notebook, please click on this [link to the notebook](01_pca.ipynb).
+
 ### Visualization of Eigendigits
 
 ![Visualization of the first 31 eigendigits](assets/image/eigendigits.png)
@@ -71,6 +73,8 @@ The training process involves minimizing the reconstruction loss, which is the d
 The efficacy of the latent representation is influenced by various factors, including the number of hidden layers, the number of neurons per layer, the size of the latent vector, the choice of activation functions, the optimizer, the learning rate, epochs, batch size, and more. These are collectively known as the hyperparameters of the autoencoder model.
 
 In this study, we focus on the impact of the latent vector size on the quality of the compressed representation. We examine four different autoencoders, all with identical hidden layer configurations but varying latent vector sizes: [2, 8, 32, 64]. While keeping encoder units `[512, 256, 128]` and decoder units `[128, 256, 512]` constant, we assess the image reconstruction quality using PSNR (Peak Signal-to-Noise Ratio) and SSIM (Structural Similarity Index) and contrast the results with those obtained from PCA (Principal Component Analysis).
+
+If you're interested in exploring more about the implementation details or would like to view the Jupyter notebook, please click on this [link to the notebook](02_auto_encoder.ipynb).
 
 ### Quantitative Analysis of Image Reconstruction (Autoencoder)
 
