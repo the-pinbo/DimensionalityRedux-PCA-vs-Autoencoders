@@ -6,34 +6,6 @@ Principal Component Analysis (PCA) provides a hierarchical coordinate system to 
 
 **NOTE:** The convention for $X$, consisting of rows of features, is different from the convention throughout the remainder of this notebook, where individual images are arranged as columns.
 
-### Computation
-
-To compute PCA, the following steps are taken:
-
-1. **Mean Calculation:**
-   The row-wise mean $\bar{x}$ (i.e., the mean of all rows) is calculated and subtracted from $X$. The mean $\bar{x}_j$ is given by:
-
-   ![Mean Calculation](https://latex.codecogs.com/svg.latex?\bar{x}_j%20=%20\frac{1}{n}%20\sum_{i=1}^{n}%20X_{ij})
-
-   where $n$ is the number of observations (rows) and $X_{ij}$ represents the value at the $i$ th row and $j$ th column.
-
-2. **Mean Matrix:**
-   The mean matrix $\bar{X}$ is constructed with each row being $\bar{x}$:
-
-   ![Mean Matrix](https://latex.codecogs.com/svg.latex?\bar{X}%20=%20\begin{bmatrix}%20\bar{x}%20\%20\vdots%20\%20\bar{x}%20\end{bmatrix})
-
-3. **Subtracting the Mean:**
-   Subtracting $\bar{X}$ from $X$ results in the mean-subtracted data $B$:
-
-   $$B = X - \bar{X}$$
-
-4. **Covariance Matrix:**
-   The covariance matrix $C$ of the rows of $B$ is then computed as:
-
-   $$C = \frac{1}{n-1} B^\top B$$
-
-   This represents the covariance between the different features.
-
 PCA then proceeds to find the eigenvalues and eigenvectors of the covariance matrix $C$. The eigenvectors (principal components) give the directions of maximum variance, and the eigenvalues give the magnitude of the variance in those directions. The data can then be projected onto these principal components to reduce its dimensionality while preserving as much variance as possible.
 
 ### First Principal Component
