@@ -13,14 +13,14 @@ To compute PCA, the following steps are taken:
 1. **Mean Calculation:**
    The row-wise mean $\bar{x}$ (i.e., the mean of all rows) is calculated and subtracted from $X$. The mean $\bar{x}_j$ is given by:
 
-   $$\bar{x}_j = \frac{1}{n} \sum_{i=1}^{n} X\_{ij}$$
+   ![Mean Calculation](https://latex.codecogs.com/svg.latex?\bar{x}_j%20=%20\frac{1}{n}\sum_{i=1}^{n}X_{ij})
 
    where $n$ is the number of observations (rows) and $X_{ij}$ represents the value at the $i$ th row and $j$ th column.
 
 2. **Mean Matrix:**
    The mean matrix $\bar{X}$ is constructed with each row being $\bar{x}$:
 
-   $$\bar{X} = \begin{bmatrix} \bar{x} \\ \vdots \\ \bar{x} \end{bmatrix}$$
+   ![Mean Matrix](https://latex.codecogs.com/svg.latex?\bar{X}%20=%20\begin{bmatrix}%20\bar{x}%20&%20\ldots%20&%20\bar{x}%20\end{bmatrix})
 
 3. **Subtracting the Mean:**
    Subtracting $\bar{X}$ from $X$ results in the mean-subtracted data $B$:
@@ -62,7 +62,7 @@ To extract meaningful patterns from our image data, we perform Singular Value De
 
 $$X = U\Sigma V^ \ast \approx \widetilde{U}\widetilde{\Sigma}\widetilde{V}^ \ast,$$
 
-Here, $U$ contains our eigenvectors—or "eigendigits"—which can be reshaped back into the original image dimensions of 28×28 pixels. The tilde notation ($\widetilde{}$) indicates that we are working with a subset of the matrix, representing a reduced number of singular values and vectors for a more efficient representation.
+Here, $U$ contains our eigenvectors—or "eigendigits"—which can be reshaped back into the original image dimensions of 28×28 pixels. The tilde notation $\widetilde{}$ indicates that we are working with a subset of the matrix, representing a reduced number of singular values and vectors for a more efficient representation.
 
 ### Visualization of Eigendigits
 
@@ -74,7 +74,7 @@ The matrix $\widetilde{U}$ holds the left singular vectors corresponding to the 
 
 To test the effectiveness of our PCA model, we use the following projection to reconstruct an image not included in our training dataset:
 
-$$\widetilde{x}_{\text{test}} = \widetilde{U} \widetilde{U}^\ast x_{\text{test}}.$$
+![Reconstruction of Test Images](https://latex.codecogs.com/svg.latex?\widetilde{x}_{\text{test}}%20=%20\widetilde{U}%20\widetilde{U}^{\ast}%20x_{\text{test}})
 
 ### Quantitative Analysis of Image Reconstruction (PCA)
 
